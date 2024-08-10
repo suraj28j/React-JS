@@ -5,7 +5,7 @@ import logo from '../Assets/Images/logo.png'
 const Header = () => {
     return (
         <div className='conatiner'>
-            <nav className="navbar navbar-expand-lg  shadow p-3 mb-5 bg-white rounded">
+            <nav className="navbar navbar-expand-lg  shadow p-3 bg-white rounded">
                 <div className="container-fluid">
                     <img src={logo} alt='logo' className="navbar-brand ms-4" style={{ height: '70px' }} />
                     <button className="navbar-toggler" data-bs-toggle="collapse" data-bs-target="#navbarCollapse">

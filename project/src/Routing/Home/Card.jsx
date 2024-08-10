@@ -4,7 +4,6 @@ const Card = () => {
   return (
     <div className='container'>
     <div className='row'>
-
        
         <div className='col-sm-3 mb-3 mb-sm-0'>
             <div class="card text-center" style={{width: "18rem;", backgroundColor:'#fdefe6'}}>
