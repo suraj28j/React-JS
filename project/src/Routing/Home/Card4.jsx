@@ -1,33 +1,30 @@
-import React from 'react'
 
-import iphone12pro from '../../Assets/Images/phone-06.jpg'
-import iphone12max from '../../Assets/Images/phone-05.jpg'
-import realme from '../../Assets/Images/phone-03.png'
-import onepluse from '../../Assets/Images/phone-04.jpg'
-import samsungS22 from '../../Assets/Images/phone-02.jpg'
-import iphone13pro from '../../Assets/Images/phone-01.jpg'
-import headphone1 from '../../Assets/Images/wireless-01.png'
-import headphone2 from '../../Assets/Images/wireless-02.png'
-import headphone3 from '../../Assets/Images/wireless-03.png'
-import headphone4 from '../../Assets/Images/wireless-04.png'
 
-const Card2 = () => {
+import sofa1 from '../../Assets/Images/double-sofa-01.png'
+import sofa2 from '../../Assets/Images/double-sofa-02.png'
+import sofa3 from '../../Assets/Images/hero-img.png'
+import sofa4 from '../../Assets/Images/double-sofa-03.png'
+import sofa5 from '../../Assets/Images/single-sofa-03.jpg'
+import sofa6 from '../../Assets/Images/single-sofa-01.jpg'
 
+
+const Card4 = () => {
   return (
-
+    
     <div className='container mt-4 mb-4'>
+
       <div className='row g-2 d-flex justify-content-center'>
 
-      <h2 className='text-center'>New Arrivals</h2>
+      <h2 className='text-center'>Best Sals</h2>
 
         <div className='col-md-4'>
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={iphone12pro} class="card-img-top w-75 " alt="iphone12pro" />
+                <img src={sofa1} class="card-img-top w-75 " alt="sofa1" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Apple iPhone 12 Pro</h6>
+                <h6 class="card-title">Stone and Beam<br/>Westview</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -37,7 +34,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 799</h6>
+                <h6>$ 193</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -50,10 +47,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={iphone12max} class="card-img-top w-75 " alt="iphone12max" />
+                <img src={sofa2} class="card-img-top w-75 " alt="sofa2" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Apple iPhone 12 Pro</h6>
+                <h6 class="card-title">Rivet Bigelow Modern</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -63,7 +60,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 799</h6>
+                <span>$ 253</span>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -76,10 +73,10 @@ const Card2 = () => {
           <div className='card' style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={realme} class="card-img-top w-75 " alt="realme" />
+                <img src={sofa3} class="card-img-top w-75 " alt="chair2" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Realme 8</h6>
+                <h6 class="card-title">Amazon Brand Modern Sofa</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -89,7 +86,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 599</h6>
+                <h6>$ 173</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -102,10 +99,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={onepluse} class="card-img-top w-75 " alt="onepluse" />
+                <img src={sofa2} class="card-img-top w-75 " alt="sofa2" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">One Pluse Nord</h6>
+                <h6 class="card-title">Rivet Bigelow Modern</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -115,7 +112,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 799</h6>
+                <h6>$ 253</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -128,10 +125,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={iphone13pro} class="card-img-top w-75 " alt="iphone13pro" />
+                <img src={sofa5} class="card-img-top w-50 " alt="sofa5" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Apple iPhone 13 Pro</h6>
+                <h6 class="card-title">Fllufy Sheep Sofa</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -141,7 +138,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 899</h6>
+                <h6>$ 163</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -154,10 +151,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={samsungS22} class="card-img-top w-75 " alt="samsungS22" />
+                <img src={sofa4} class="card-img-top w-75 " alt="sofa4" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Samsung Galaxy S22</h6>
+                <h6 class="card-title">Fllufy Velvet Sofa</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -167,7 +164,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 699</h6>
+                <h6>$ 163</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -180,10 +177,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={headphone1} class="card-img-top w-75 " alt="headphone1" />
+                <img src={sofa5} class="card-img-top w-50 " alt="sofa5" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Beat Studio Wireless</h6>
+                <h6 class="card-title">Fllufy Sheep Sofa</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -193,7 +190,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 199</h6>
+                <h6>$ 163</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -206,10 +203,10 @@ const Card2 = () => {
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
               <div className='card-img-top d-flex justify-content-center'>
-                <img src={headphone3} class="card-img-top w-75 " alt="headphone3" />
+                <img src={sofa6} class="card-img-top w-50 " alt="sofa6" />
               </div>
               <div className='card-title'>
-                <h6 class="card-title">Beat EP Headphones</h6>
+                <h6 class="card-title">Modern Arm Sofa</h6>
                 <span className='d-flex mt-4 mb-4'>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
                   <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
@@ -219,7 +216,7 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <h6>$ 199</h6>
+                <h6>$ 173</h6>
                 <button 
                 style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
                 </button>
@@ -228,61 +225,11 @@ const Card2 = () => {
           </div>
         </div>
 
-        <div className='col-md-4'>
-          <div className='card'style={{height:'100%'}}>
-            <div className='card-body'>
-              <div className='card-img-top d-flex justify-content-center'>
-                <img src={headphone2} class="card-img-top w-75 " alt="headphone2" />
-              </div>
-              <div className='card-title'>
-                <h6 class="card-title">Black Headphones</h6>
-                <span className='d-flex mt-4 mb-4'>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                </span>
-              </div>
-              <div className='d-flex justify-content-between'>
-                <h6>$ 169</h6>
-                <button 
-                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
-
-        <div className='col-md-4'>
-          <div className='card'style={{height:'100%'}}>
-            <div className='card-body'>
-              <div className='card-img-top d-flex justify-content-center'>
-                <img src={headphone4} class="card-img-top w-75 " alt="headphone4" />
-              </div>
-              <div className='card-title'>
-                <h6 class="card-title">Bluetooth Headphones</h6>
-                <span className='d-flex mt-4 mb-4'>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                  <i class="bi bi-star-fill" style={{color:'yellow'}}></i>
-                </span>
-              </div>
-              <div className='d-flex justify-content-between'>
-                <h6>$ 139</h6>
-                <button 
-                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
-                </button>
-              </div>
-            </div>
-          </div>
-        </div>
 
       </div>
+
     </div>
   )
 }
 
-export default Card2
+export default Card4

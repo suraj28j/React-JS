@@ -200,8 +200,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span>$ 193</span>
-                <span>+</span>
+                <h6>$ 193</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
@@ -228,8 +230,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span>$ 253</span>
-                <span>+</span>
+                <h6>$ 253</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
@@ -256,8 +260,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span>$ 89</span>
-                <span>+</span>
+                <h6>$ 89</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
@@ -284,8 +290,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span>$ 112</span>
-                <span>+</span>
+                <h6>$ 112</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
@@ -312,8 +320,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span className='fw'>$ 599</span>
-                <span>+</span>
+                <h6>$ 599</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
@@ -340,8 +350,10 @@ const Card2 = () => {
                 </span>
               </div>
               <div className='d-flex justify-content-between'>
-                <span>$ 799</span>
-                <span>+</span>
+                <h6>$ 799</h6>
+                <button 
+                style={{border:'0px',borderRadius:'50%',width:'30px',height:'30px',paddingBottom:'4px'}}>+
+                </button>
               </div>
             </div>
           </div>
