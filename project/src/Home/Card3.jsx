@@ -10,6 +10,7 @@ import headphone1 from '../Assets/Images/wireless-01.png'
 import headphone2 from '../Assets/Images/wireless-02.png'
 import headphone3 from '../Assets/Images/wireless-03.png'
 import headphone4 from '../Assets/Images/wireless-04.png'
+import { Link } from 'react-router-dom'
 
 const Card2 = () => {
 
@@ -23,9 +24,11 @@ const Card2 = () => {
         <div className='col-md-4'>
           <div className='card'style={{height:'100%'}}>
             <div className='card-body'>
+            {/* <Link to={`product/${items.id}`}> */}
               <div className='card-img-top d-flex justify-content-center'>
                 <img src={iphone12pro} class="card-img-top w-75 " alt="iphone12pro" />
               </div>
+              {/* </Link> */}
               <div className='card-title'>
                 <h6 class="card-title">Apple iPhone 12 Pro</h6>
                 <span className='d-flex mt-4 mb-4'>

@@ -19,7 +19,7 @@ const Carousel = () => {
                 </div>
                 <div className='col-md-1'></div>
                 <div className='col-md-3'>
-                  <img src={item.cover} class="d-block" alt={item.id} />
+                  <img src={item.cover} class="d-block img-fluid" alt={item.id} />
                 </div>
                 <div className='col-md-2'></div>
               </div>
