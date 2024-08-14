@@ -3,7 +3,8 @@ import { Route,Routes } from 'react-router-dom'
 import Home from '../Home/Home'
 import Shop from '../Shop/Shop'
 import Cart from '../Cart/Cart'
-import Product from '../Product/Product';
+import Product from '../Product/Product'
+
 
 
 const Routing = () => {

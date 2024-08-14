@@ -5,7 +5,7 @@ const Footer = () => {
         <div style={{backgroundColor:'#0f3460'}}>
 
         
-        <div className='container ps-4 pt-2'>
+        <div className='container pt-2'>
             <div className='row m-4' style={{color:'white'}}>
 
                 <div className='col-md-3'>
@@ -16,11 +16,11 @@ const Footer = () => {
                 <div className='col-md-3'>
                     <h5 className='ms-md-4'>About Us</h5>
                     <ul className='ms-md-4' style={{listStyle:'none',padding:'0px'}}>
-                        <li style={{padding:'2px 0px 2px 0px'}}>Carrers</li>
-                        <li style={{padding:'2px 0px 2px 0px'}}>Our Store</li>
-                        <li style={{padding:'2px 0px 2px 0px'}}>Our Cares</li>
-                        <li style={{padding:'2px 0px 2px 0px'}}>Term and Conditions</li>
-                        <li style={{padding:'2px 0px 2px 0px'}}>Privacy Policy</li>
+                        <li style={{padding:'2px 0px'}}>Carrers</li>
+                        <li style={{padding:'2px 0px'}}>Our Store</li>
+                        <li style={{padding:'2px 0px'}}>Our Cares</li>
+                        <li style={{padding:'2px 0px'}}>Term and Conditions</li>
+                        <li style={{padding:'2px 0px'}}>Privacy Policy</li>
                     </ul>
                 </div>
 

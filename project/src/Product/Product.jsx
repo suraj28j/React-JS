@@ -12,7 +12,7 @@ const Product = () => {
 
   useEffect(() => {
     getProduct();
-  }, []);
+  });
 
   let getProduct = () => {
 
