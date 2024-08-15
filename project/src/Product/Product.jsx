@@ -12,14 +12,14 @@ const Product = () => {
 
   useEffect(() => {
     getProduct();
-  });
+  },[alsoLike]);
 
   let getProduct = () => {
 
     let getItem = products.find((item) => {
       return item.id === id;
     })
-
+    console.log(getItem);
     setProduct(getItem);
     
     let Like = [];

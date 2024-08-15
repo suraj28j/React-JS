@@ -10,8 +10,7 @@ const Shop = () => {
 
   let LinkButtonHandler = (cat) => {
     console.log(cat);
-    let getItems = [];
-    getItems = products.filter((item) => {
+    let getItems = products.filter((item) => {
       return item.category === cat;
     })
     setProductCategory(getItems)
@@ -20,8 +19,7 @@ const Shop = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-    let getItems = [];
-    getItems = products.filter((item) => {
+    let getItems = products.filter((item) => {
       return item.category === e.target[0].value;
     })
     if(getItems)
@@ -41,6 +39,7 @@ const Shop = () => {
 
       {/* For dropdown and search bar */}
       <div className='row mt-4 mb-4 '>
+
         <div className='col-md-4'>
           <div className="dropdown">
             <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
@@ -56,6 +55,7 @@ const Shop = () => {
             </ul>
           </div>
         </div>
+
         <div className='col-md-8'>
           <form className="d-flex" role="search" onSubmit={handelSubmit}>
             <input className="form-control" type="search" placeholder="Search" />
@@ -74,7 +74,7 @@ const Shop = () => {
                   <div className='card-body'>
                   <Link to={`/product/${items.id}`}>
                     <div className='card-img-top d-flex justify-content-center'>
-                      <img src={items.imgUrl} class="card-img-top w-75 " alt={items.id} />
+                      <img src={items.imgUrl} class="card-img-top img-fluid " alt={items.id} />
                     </div>
                     </Link>
                     <div className='card-title'>
