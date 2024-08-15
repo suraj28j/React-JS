@@ -14,7 +14,6 @@ const Card2 = () => {
       <h2 className='text-center'>Big Discount</h2>
       <div className='row g-2'>
         {
-
           discoutProducts.map((items) => (
             <div className='col-md-4'>
 
@@ -49,7 +48,6 @@ const Card2 = () => {
                   </div>
                 </div>
               </div>
-
             </div>
           ))
         }

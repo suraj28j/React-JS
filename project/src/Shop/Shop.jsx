@@ -64,7 +64,7 @@ const Shop = () => {
         </div>
       </div>
 
-      {/* For items */}
+      {/* For Products */}
       <div className='row g-2 d-flex justify-content-center'>
         {
           productCategory.length>0 ? (
@@ -72,9 +72,11 @@ const Shop = () => {
               <div className='col-md-4'>
                 <div className='card' style={{ height: '100%', }}>
                   <div className='card-body'>
+                  <Link to={`/product/${items.id}`}>
                     <div className='card-img-top d-flex justify-content-center'>
                       <img src={items.imgUrl} class="card-img-top w-75 " alt={items.id} />
                     </div>
+                    </Link>
                     <div className='card-title'>
                       <h6 className="card-title">{items.productName}</h6>
                       <span className='d-flex mt-4 mb-4'>

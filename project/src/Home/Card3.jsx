@@ -25,7 +25,6 @@ const Card2 = () => {
   }
 
   return (
-
     <div className='container mt-4 mb-4'>
       <h2 className='text-center mt-4'>New Arrivals</h2>
       <div className='row g-2 d-flex justify-content-center'>

@@ -79,11 +79,11 @@ const Product = () => {
             <div className='col-md-4'>
               <div className='card' style={{ height: '100%'}}>
                 <div className='card-body'>
-                {/* <Link to={`product/${items.id}`}> */}
+                <Link to={`/product/${items.id}`}>
                   <div className='card-img-top d-flex justify-content-center'>
                     <img src={items.imgUrl} class="card-img-top img-fluid" alt={items.id} />
                   </div>
-                  {/* </Link> */}
+                  </Link>
                   <div className='card-title'>
                     <h6 className="card-title">{items.productName}</h6>
                     <span className='d-flex mt-4 mb-4'>

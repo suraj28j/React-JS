@@ -25,11 +25,9 @@ const Card4 = () => {
   }
 
   return (
-
     <div className='container mt-4 mb-4'>
       <h2 className='text-center mt-4'>Best Sals</h2>
       <div className='row g-2 d-flex justify-content-center'>
-
         {
           arrivals.map((item) => (
             <div className='col-md-4'>
