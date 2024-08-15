@@ -15,6 +15,7 @@ const Shop = () => {
       return item.category === cat;
     })
     setProductCategory(getItems)
+    
   }
 
   const handelSubmit = (e) => {
@@ -23,7 +24,10 @@ const Shop = () => {
     getItems = products.filter((item) => {
       return item.category === e.target[0].value;
     })
-    setProductCategory(getItems);
+    if(getItems)
+      setProductCategory(getItems)
+      else
+      setProductCategory([])
   }
 
 
@@ -47,6 +51,7 @@ const Shop = () => {
               <li><Link className="dropdown-item" onClick={() => LinkButtonHandler('sofa')}>Sofa</Link></li>
               <li><Link className="dropdown-item" onClick={() => LinkButtonHandler('chair')}>Chair</Link></li>
               <li><Link className="dropdown-item" onClick={() => LinkButtonHandler('watch')}>Watch</Link></li>
+              <li><Link className="dropdown-item" onClick={() => LinkButtonHandler('mobile')}>Mobile</Link></li>
               <li><Link className="dropdown-item" onClick={() => LinkButtonHandler('wireless')}>Wireless</Link></li>
             </ul>
           </div>
@@ -62,35 +67,42 @@ const Shop = () => {
       {/* For items */}
       <div className='row g-2 d-flex justify-content-center'>
         {
-          productCategory.map((items) => (
-            <div className='col-md-4'>
-              <div className='card' style={{ height: '100%', }}>
-                <div className='card-body'>
-                  <div className='card-img-top d-flex justify-content-center'>
-                    <img src={items.imgUrl} class="card-img-top w-75 " alt={items.id} />
-                  </div>
-                  <div className='card-title'>
-                    <h6 className="card-title">{items.productName}</h6>
-                    <span className='d-flex mt-4 mb-4'>
-                      <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
-                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                    </span>
-                  </div>
-                  <div className='d-flex justify-content-between'>
-                    <h6>$ {items.price}</h6>
-                    <button
-                      onClick={buttonHandler}
-                      style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
-                    >+
-                    </button>
+          productCategory.length>0 ? (
+            productCategory.map((items) => (
+              <div className='col-md-4'>
+                <div className='card' style={{ height: '100%', }}>
+                  <div className='card-body'>
+                    <div className='card-img-top d-flex justify-content-center'>
+                      <img src={items.imgUrl} class="card-img-top w-75 " alt={items.id} />
+                    </div>
+                    <div className='card-title'>
+                      <h6 className="card-title">{items.productName}</h6>
+                      <span className='d-flex mt-4 mb-4'>
+                        <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      </span>
+                    </div>
+                    <div className='d-flex justify-content-between'>
+                      <h6>$ {items.price}</h6>
+                      <button
+                        onClick={buttonHandler}
+                        style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
+                      >+
+                      </button>
+                    </div>
                   </div>
                 </div>
               </div>
-            </div>
-          ))
+            ))
+          ) : (
+            
+            <div className='col bg-light text-center'>
+              <h5>Item not found</h5>
+              </div>
+          )
         }
       </div>
     </div>
