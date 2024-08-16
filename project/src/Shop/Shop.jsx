@@ -20,7 +20,9 @@ const Shop = () => {
   const handelSubmit = (e) => {
     e.preventDefault();
     let getItems = products.filter((item) => {
-      return item.category === e.target[0].value;
+      return item.category === e.target[0].value
+      // return item.category === e.target[0].value || item.productName === /^[e.target[0].value]/ 
+
     })
     if(getItems)
       setProductCategory(getItems)
@@ -40,7 +42,7 @@ const Shop = () => {
       {/* For dropdown and search bar */}
       <div className='row mt-4 mb-4 '>
 
-        <div className='col-md-4'>
+        <div className='col-md-4 mt-2'>
           <div className="dropdown">
             <button className="btn dropdown-toggle" type="button" data-bs-toggle="dropdown" aria-expanded="false"
               style={{ backgroundColor: '#0f3460', color: 'white' }}>
@@ -56,7 +58,7 @@ const Shop = () => {
           </div>
         </div>
 
-        <div className='col-md-8'>
+        <div className='col-md-8 mt-2'>
           <form className="d-flex" role="search" onSubmit={handelSubmit}>
             <input className="form-control" type="search" placeholder="Search" />
             <button className="btn btn-secoandry" type="submit"><i className="bi bi-search p-2"></i></button>
