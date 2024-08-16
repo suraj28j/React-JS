@@ -21,7 +21,7 @@ const Card2 = () => {
   }
 
   let buttonHandler = () => {
-    toast.success("Addde Successfully")
+    toast.success("Added Successfully")
   }
 
   return (

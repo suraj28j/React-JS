@@ -1,8 +1,13 @@
 import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../Assets/Images/logo.png'
+import { useSelector } from 'react-redux'
+
+
 
 const Header = () => {
+  const cart_data = useSelector((state) => state.productData.cartData);
+    let cartLength = cart_data.length
     return (
         <div className='conatiner sticky-top'>
             <nav className="navbar navbar-expand-lg  shadow p-3 bg-white rounded">
@@ -27,7 +32,7 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link className="dropdown-item nav-link me-4" to='/usercart'>
-                                    <i class="bi bi-cart-fill"></i><span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" style={{ width: '25px', height: '25px', lineHeight: '18px' }}>0</span>
+                                    <i class="bi bi-cart-fill"></i><span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" style={{ width: '25px', height: '25px', lineHeight: '18px' }}>{cartLength}</span>
                                 </Link>
                             </li>
                         </ul>
