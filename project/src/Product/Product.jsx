@@ -2,16 +2,20 @@ import React, { useState, useEffect } from 'react'
 import { Link, useParams } from 'react-router-dom'
 import { products } from '../Assets/products'
 import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const Product = () => {
 
   let { id } = useParams();
 
+  const dispatch = useDispatch();
+
   const [product, setProduct] = useState({});
   const [alsoLike,setalsoLike] = useState([]);
 
   useEffect(() => {
-    getProduct();
+    getProduct()
   },[alsoLike]);
 
   let getProduct = () => {
@@ -30,8 +34,13 @@ const Product = () => {
     // console.log(Like);
     }
 
+    let handelSubmit = (e) => {
+      e.preventDefault();
+      toast.success("Added Successfully");
+    }
+
     let buttonHandler = () => {
-      toast.success("Addde Successfully");
+      
     }
 
   return (
@@ -54,14 +63,12 @@ const Product = () => {
               <h5 className='p-2'>$ {product.price} <span className='ms-4 text-muted'>category : {product.category}</span></h5>
               <p className='mt-3'>{product.shortDesc}</p>
             </div>
-            <div className='mt-3'>
-              <input type='text' style={{ width: '100px' }}/>
-            </div>
-            <div className='mt-3'>
-              <button className='btn px-3 py-2' style={{ backgroundColor: '#0f3460', color: 'white' }}
-              onClick={buttonHandler}
+            <form className='mt-3' onSubmit={handelSubmit}>
+              <input type='text' className="form-control" style={{ width: '100px' }}/>
+              <button className='btn px-2 py-2 mt-2' style={{ backgroundColor: '#0f3460', color: 'white' }}
+              onClick={()=>{dispatch(addToCart(product))}}
               >Add to Cart</button>
-            </div>
+            </form>
           </div>
         </div>
 

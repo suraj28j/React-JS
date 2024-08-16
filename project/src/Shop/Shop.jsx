@@ -8,6 +8,8 @@ import { Link } from 'react-router-dom'
 const Shop = () => {
   const [productCategory, setProductCategory] = useState(discoutProducts)
 
+  
+
   let LinkButtonHandler = (cat) => {
     console.log(cat);
     let getItems = products.filter((item) => {
@@ -19,10 +21,8 @@ const Shop = () => {
 
   const handelSubmit = (e) => {
     e.preventDefault();
-    let getItems = products.filter((item) => {
+    let getItems = products.filter((item) => {  
       return item.category === e.target[0].value
-      // return item.category === e.target[0].value || item.productName === /^[e.target[0].value]/ 
-
     })
     if(getItems)
       setProductCategory(getItems)

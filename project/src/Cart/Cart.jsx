@@ -21,7 +21,6 @@ const Cart = () => {
                   </div>
 
                   <div className='col-md-7 '>
-
                     <h4 className='mt-4'>{item.productName}</h4>
                     <div className='d-flex justify-content-between align-items-center'>
                       <p className='mt-4'>$ {item.price}</p>
@@ -30,7 +29,6 @@ const Cart = () => {
                         <button className='ms-1 ps-2 pe-2 pb-1' style={{ border: '0px' }}>-</button>
                       </div>
                     </div>
-
                   </div>
 
                 </div>
@@ -42,7 +40,7 @@ const Cart = () => {
             )
           }
         </div>
-        
+
         {/* Cart Summary */}
         <div className='col-md-3 mt-4 ms-1 me-1'style={{backgroundColor:'#ffffff', height:'25vh'}}>
           <h6 className='mt-4'>Cart Summary</h6>
