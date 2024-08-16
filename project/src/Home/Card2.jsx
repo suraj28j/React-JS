@@ -2,8 +2,12 @@ import React from 'react'
 import { discoutProducts } from '../Assets/products'
 import { Link } from 'react-router-dom'
 import { toast } from 'react-toastify'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const Card2 = () => {
+
+  const dispatch = useDispatch();
 
   let buttonHandler = () => {
     toast.success("Addde Successfully")
@@ -42,7 +46,7 @@ const Card2 = () => {
                     <h6>$ {items.price}</h6>
                     <button
                       style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
-                      onClick={buttonHandler}
+                      onClick={()=>{dispatch(addToCart(items))}}
                     >+
                     </button>
                   </div>

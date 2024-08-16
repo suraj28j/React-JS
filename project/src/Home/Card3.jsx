@@ -10,7 +10,7 @@ const Card2 = () => {
 
   useEffect(() => {
     getData();
-  })
+  },[])
 
   const getData = () => {
     let data = [];
