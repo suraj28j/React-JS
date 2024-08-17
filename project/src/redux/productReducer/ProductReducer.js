@@ -1,7 +1,7 @@
 const initState = {
     cartData:[],
     products:[],
-    removeProductsFromCart:[]
+    // removeProductsFromCart:[]
 };
 
 // export let cartDataLength = cartData.length

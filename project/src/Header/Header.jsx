@@ -6,8 +6,11 @@ import { useSelector } from 'react-redux'
 
 
 const Header = () => {
-  const cart_data = useSelector((state) => state.productData.cartData);
-    let cartLength = cart_data.length
+
+    const cart_data = useSelector((state) => state.productData.cartData);
+    let singleItem = cart_data.filter((value, index) => cart_data.indexOf(value) === index)
+    let cartLength = singleItem.length
+
     return (
         <div className='conatiner sticky-top'>
             <nav className="navbar navbar-expand-lg  shadow p-3 bg-white rounded">
@@ -32,7 +35,10 @@ const Header = () => {
                             </li>
                             <li>
                                 <Link className="dropdown-item nav-link me-4" to='/usercart'>
-                                    <i class="bi bi-cart-fill"></i><span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" style={{ width: '25px', height: '25px', lineHeight: '18px' }}>{cartLength}</span>
+                                    <i class="bi bi-cart-fill"></i>
+                                    <span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" 
+                                    style={{ width: '25px', height: '25px', lineHeight: '18px' }}
+                                    >{cartLength}</span>
                                 </Link>
                             </li>
                         </ul>

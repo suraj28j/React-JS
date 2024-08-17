@@ -46,7 +46,7 @@ const Card2 = () => {
                     <h6>$ {items.price}</h6>
                     <button
                       style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
-                      onClick={()=>{dispatch(addToCart(items))}}
+                      onClick={()=>{dispatch(addToCart(items));buttonHandler()}}
                     >+
                     </button>
                   </div>

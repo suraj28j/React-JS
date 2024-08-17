@@ -6,7 +6,6 @@ import Cart from '../Cart/Cart'
 import Product from '../Product/Product'
 
 
-
 const Routing = () => {
   return (
     <div>

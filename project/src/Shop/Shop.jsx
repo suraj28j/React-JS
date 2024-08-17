@@ -1,14 +1,19 @@
 import { useState } from 'react'
-import { discoutProducts } from '../Assets/products'
 import { products } from '../Assets/products'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
-
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const Shop = () => {
-  const [productCategory, setProductCategory] = useState(discoutProducts)
 
-  
+  const dispatch = useDispatch();
+
+  let sofa = products.filter((item)=>{
+    return item.category === 'sofa';
+  })
+
+  const [productCategory, setProductCategory] = useState(sofa);
 
   let LinkButtonHandler = (cat) => {
     console.log(cat);
@@ -70,17 +75,17 @@ const Shop = () => {
       <div className='row g-2 d-flex justify-content-center'>
         {
           productCategory.length>0 ? (
-            productCategory.map((items) => (
+            productCategory.map((item) => (
               <div className='col-md-4'>
                 <div className='card' style={{ height: '100%', }}>
                   <div className='card-body'>
-                  <Link to={`/product/${items.id}`}>
+                  <Link to={`/product/${item.id}`}>
                     <div className='card-img-top d-flex justify-content-center'>
-                      <img src={items.imgUrl} class="card-img-top img-fluid " alt={items.id} />
+                      <img src={item.imgUrl} class="card-img-top img-fluid " alt={item.id} />
                     </div>
                     </Link>
                     <div className='card-title'>
-                      <h6 className="card-title">{items.productName}</h6>
+                      <h6 className="card-title">{item.productName}</h6>
                       <span className='d-flex mt-4 mb-4'>
                         <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
                         <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
@@ -90,9 +95,9 @@ const Shop = () => {
                       </span>
                     </div>
                     <div className='d-flex justify-content-between'>
-                      <h6>$ {items.price}</h6>
+                      <h6>$ {item.price}</h6>
                       <button
-                        onClick={buttonHandler}
+                        onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
                         style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
                       >+
                       </button>

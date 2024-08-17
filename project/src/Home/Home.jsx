@@ -8,13 +8,13 @@ import Card4 from './Card4'
 
 const Home = () => {
   return (
-    <>
+    <div>
       <Carousel/>
       <Card/>
       <Card2/>
       <Card3/>
       <Card4/>
-    </>
+    </div>
   )
 }
 

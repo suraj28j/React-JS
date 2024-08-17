@@ -3,9 +3,13 @@ import { useState, useEffect } from 'react'
 import { products } from '../Assets/products'
 import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
+import { useDispatch } from 'react-redux'
+import {addToCart} from '../redux/productAction/ProductAction'
 
 const Card4 = () => {
 
+  const dispatch = useDispatch();
+  
   const [arrivals, setArrivals] = useState([]);
 
   useEffect(() => {
@@ -51,8 +55,9 @@ const Card4 = () => {
                   <div className='d-flex justify-content-between'>
                     <h6>$ {item.price}</h6>
                     <button
-                      style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }} onClick={buttonHandler}>+
-                    </button>
+                      style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }} 
+                      onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
+                      >+</button>
                   </div>
                 </div>
               </div>
