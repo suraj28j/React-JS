@@ -17,10 +17,9 @@ const Product = () => {
 
   useEffect(() => {
     getProduct()
-  }, []);
+  },id);
 
   let getProduct = () => {
-
     let getItem = products.find((item) => {
       return item.id === id;
     })
@@ -30,7 +29,7 @@ const Product = () => {
 
     let Like = [];
     Like = products.filter((item) => {
-      return item.category === getItem.category
+      return item.category === getItem.category && item.id!==getItem.id
     })
     setalsoLike(Like)
     // console.log(Like);
