@@ -1,25 +1,24 @@
 const initState = {
-    cartData:[],
-    products:[],
+    cartData: [],
+    products: [],
     // removeProductsFromCart:[]
 };
 
-// export let cartDataLength = cartData.length
-export const productReducer = (state=initState, action) => {
-
-    console.log(action);
-    switch(action.type){
-        
+export const productReducer = (state = initState, action) => {
+    
+    // console.log(action);
+    switch (action.type) {
         case 'ADD_TO_CART':
             return {
-                ...state,cartData:[...state.cartData,action.payload]
+                ...state, cartData: [...state.cartData, action.payload]
             };
+           
         case 'REMOVE_FROM_CART':
-            const filterProduct = state.cartData.filter((cartItem)=>{
+            const filterProduct = state.cartData.filter((cartItem) => {
                 return cartItem.id !== action.payload
             })
             return {
-               ...state,cartData:filterProduct
+                ...state, cartData: filterProduct
             };
         default: return state;
     }

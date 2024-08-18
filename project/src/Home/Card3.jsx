@@ -30,8 +30,8 @@ const Card2 = () => {
 
   return (
     <div className='container mt-4 mb-4'>
+      <div className='row mt-4 g-2 d-flex justify-content-center'>
       <h2 className='text-center mt-4'>New Arrivals</h2>
-      <div className='row g-2 d-flex justify-content-center'>
 
         {
           arrivals.map((item) => (

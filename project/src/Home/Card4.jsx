@@ -29,17 +29,18 @@ const Card4 = () => {
   }
 
   return (
+    <div style={{backgroundColor:'#f6f9fc'}}>
     <div className='container mt-4 mb-4'>
+      <div className='row mt-4 g-2 d-flex justify-content-center'>
       <h2 className='text-center mt-4'>Best Sals</h2>
-      <div className='row g-2 d-flex justify-content-center'>
         {
           arrivals.map((item) => (
             <div className='col-md-4'>
               <div className='card' style={{ height: '100%' }}>
                 <div className='card-body'>
                   <Link to={`product/${item.id}`}>
-                    <div className='card-img-top d-flex justify-content-center'>
-                      <img src={item.imgUrl} class="card-img-top w-75 " alt={item.id} />
+                    <div className=' d-flex justify-content-center'>
+                      <img src={item.imgUrl} class="img-fluid" alt={item.id} />
                     </div>
                   </Link>
                   <div className='card-title'>
@@ -65,6 +66,8 @@ const Card4 = () => {
           ))
         }
       </div>
+    </div>
+
     </div>
   )
 }

@@ -5,10 +5,13 @@ const Carousel = () => {
 
 
   return (
-    // <>
+    <div style={{backgroundColor:'#f6f9fc'}}>
+
     <div id="carouselExampleSlidesOnly" className="carousel slide" data-bs-ride="carousel" >
       <div className="carousel-inner">
 
+    {/* items with map function */}
+    
         {/* {
           SliderData.map((item) => ( 
          <div class='carousel-item active' data-bs-interval="3000" >
@@ -96,7 +99,8 @@ const Carousel = () => {
 
       </div>
     </div>
-    // </>
+
+    </div>
 
   )
 }

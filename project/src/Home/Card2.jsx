@@ -14,9 +14,10 @@ const Card2 = () => {
   }
 
   return (
+    <div style={{backgroundColor:'#f6f9fc'}}>
     <div className='container mt-4 mb-4'>
-      <h2 className='text-center'>Big Discount</h2>
-      <div className='row g-2'>
+      <div className='row mt-4 g-2'>
+      <h2 className='text-center mt-4'>Big Discount</h2>
         {
           discoutProducts.map((items) => (
             <div className='col-md-4'>
@@ -56,6 +57,7 @@ const Card2 = () => {
           ))
         }
       </div>
+    </div>
     </div>
   )
 }

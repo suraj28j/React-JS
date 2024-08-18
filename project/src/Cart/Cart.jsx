@@ -1,4 +1,4 @@
-import React, { useState,useEffect } from 'react'
+import React, { useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { removeFromCart } from '../redux/productAction/ProductAction';
@@ -6,33 +6,31 @@ import { Link } from 'react-router-dom';
 
 const Cart = () => {
 
-  const [itemCount, setitemCount] = useState(1);
+  const dispatch = useDispatch();
+  const cart_data = useSelector((state) => state.productData.cartData);
+  console.log(cart_data);
+  
+  const [quantity, setQuantity] = useState(2)
 
-  const incrementItem = (itemPrice) => {
-    setitemCount(itemCount + 1)
+  const incrementItem = (product) => {
+    let increasedPrice = cart_data.map((item)=>{
+      if (item.id === product.id){
+        item.price = item.price * quantity ;
+        setQuantity(quantity+1);
+      }
+    })
+    setQuantity(quantity + 1)
   }
-  const decrementItem = (itemPrice) => {
-    if (itemCount > 1) {
-      setitemCount(itemCount - 1)
+  
+  const decrementItem = (item) => {
+    if (quantity > 1) {
+      setQuantity(quantity - 1)
     }
   }
-
-
-  const dispatch = useDispatch();
-
-  const cart_data = useSelector((state) => state.productData.cartData);
-  // console.log(cart_data);
 
   const totalPrice = cart_data.reduce((prevsValue, currentValue) => {
     return prevsValue + currentValue.price;
   }, 0)
-
-  const checkItemNumber = (id) => {
-    let itemNumber = cart_data.filter((item) => {
-      return item.id === id;
-
-    })
-  }
 
   return (
 
@@ -43,7 +41,6 @@ const Cart = () => {
             cart_data && cart_data.length ? (
               cart_data.map((item) => (
                 <div className='row ms-1 me-1 mt-4 mb-4' style={{ backgroundColor: '#ffffff' }}>
-
                   <div className='col-md-4 '>
                     <img src={item.imgUrl} alt={item.id} className='img-fluid' />
                   </div>
@@ -58,15 +55,15 @@ const Cart = () => {
                     <div className='d-flex justify-content-between align-items-center mt-4'>
                       <h6>
                         <span className='text-secondary'>${item.price}</span> *
-                        <span className='text-secondary'> {itemCount}</span>
+                        <span className='text-secondary'> {item.price/item.price}</span>
                         <span className='ms-4'>${item.price}</span>
                       </h6>
                       <div className='me-4'>
                         <button className='pb-1' style={{ border: '0px' }}
-                          onClick={() => incrementItem(item.price)}
+                          onClick={() => incrementItem(item)}
                         >+</button>
                         <button className='ms-1 ps-2 pe-2 pb-1' style={{ border: '0px' }}
-                          onClick={() => decrementItem(item.price)}
+                          onClick={() => decrementItem(item)}
                         >-</button>
                       </div>
                     </div>
