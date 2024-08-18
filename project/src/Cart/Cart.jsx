@@ -1,27 +1,30 @@
-import React, { useState } from 'react'
+import React, { useEffect, useState } from 'react'
 import { useSelector } from 'react-redux'
 import { useDispatch } from 'react-redux'
 import { removeFromCart } from '../redux/productAction/ProductAction';
 import { Link } from 'react-router-dom';
 
 const Cart = () => {
+  
+  const [quantity, setQuantity] = useState(1)
 
   const dispatch = useDispatch();
   const cart_data = useSelector((state) => state.productData.cartData);
-  console.log(cart_data);
+  // console.log(cart_data);
   
-  const [quantity, setQuantity] = useState(2)
+  // useEffect(()=>{
+  //   getBasicPrice()
+  // },0)
+  // const getBasicPrice = () => {
+  //   let currentAddedItem = cart_data.pop();
+  //   // let {price} = currentAddedItem.price
+  //   console.log(currentAddedItem);
+  // }
 
-  const incrementItem = (product) => {
-    let increasedPrice = cart_data.map((item)=>{
-      if (item.id === product.id){
-        item.price = item.price * quantity ;
+  const incrementItem = (item) => {
         setQuantity(quantity+1);
-      }
-    })
-    setQuantity(quantity + 1)
   }
-  
+
   const decrementItem = (item) => {
     if (quantity > 1) {
       setQuantity(quantity - 1)
@@ -55,8 +58,8 @@ const Cart = () => {
                     <div className='d-flex justify-content-between align-items-center mt-4'>
                       <h6>
                         <span className='text-secondary'>${item.price}</span> *
-                        <span className='text-secondary'> {item.price/item.price}</span>
-                        <span className='ms-4'>${item.price}</span>
+                        <span className='text-secondary'> {quantity}</span>
+                        <span className='ms-4'>${item.price*quantity}</span>
                       </h6>
                       <div className='me-4'>
                         <button className='pb-1' style={{ border: '0px' }}

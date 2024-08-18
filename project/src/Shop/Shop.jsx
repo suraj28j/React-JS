@@ -40,6 +40,19 @@ const Shop = () => {
       setProductCategory([])
   }
 
+  // const handleChange = (e) => {
+  //   // console.log(e.target.value);
+  //   let getItems = products.filter((item) => {
+  //      return item.productName.match(/e.target.value/g)
+  //   })
+  //   if (getItems){
+  //     setProductCategory(getItems)
+  //     setCoverHeading(e.target.value)
+  //   }
+  //   else
+  //     setProductCategory([])
+  // }
+
   let buttonHandler = () => {
     toast.success("Addde Successfully")
   }
@@ -73,7 +86,7 @@ const Shop = () => {
 
           <div className='col-md-8 mt-2'>
             <form className="d-flex" role="search" onSubmit={handelSubmit}>
-              <input className="form-control" type="search" placeholder="Search" />
+              <input className="form-control" type="search" placeholder="Search"/>
               <button className="btn btn-secoandry" type="submit"><i className="bi bi-search p-2"></i></button>
             </form>
           </div>

@@ -25,7 +25,7 @@ const Card2 = () => {
               <div className='card' style={{ height: '100%' }}>
                 <div className='d-flex justify-content-between m-2'>
                   <span className='p-2' style={{ backgroundColor: '#0f3460', color: 'white', borderRadius: '5px' }}>{items.discount}% off</span>
-                  <i className="bi bi-heart-fill" ></i>
+                  <i class="bi bi-heart"></i>
                 </div>
                 <div className='card-body'>
                   <Link to={`product/${items.id}`}>
