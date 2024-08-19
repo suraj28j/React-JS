@@ -43,7 +43,7 @@ const Carousel = () => {
             </div>
             <div className='col-md-1'></div>
             <div className='col-md-4 d-flex justify-content-center'>
-              <img src={SliderData[0].cover} class="d-block img-fluid" alt={SliderData[0].id} />
+              <img src={SliderData[0].cover} className="d-block img-fluid" alt={SliderData[0].id} />
             </div>
             <div className='col-md-1'></div>
           </div>
@@ -59,7 +59,7 @@ const Carousel = () => {
             </div>
             <div className='col-md-1'></div>
             <div className='col-md-4 d-flex justify-content-center'>
-              <img src={SliderData[1].cover} class="d-block img-fluid" alt={SliderData[1].id} />
+              <img src={SliderData[1].cover} className="d-block img-fluid" alt={SliderData[1].id} />
             </div>
             <div className='col-md-1'></div>
           </div>
@@ -75,7 +75,7 @@ const Carousel = () => {
             </div>
             <div className='col-md-1'></div>
             <div className='col-md-4 d-flex justify-content-center'>
-              <img src={SliderData[2].cover} class="d-block img-fluid" alt={SliderData[2].id} />
+              <img src={SliderData[2].cover} className="d-block img-fluid" alt={SliderData[2].id} />
             </div>
             <div className='col-md-1'></div>
           </div>
@@ -91,7 +91,7 @@ const Carousel = () => {
             </div>
             <div className='col-md-1'></div>
             <div className='col-md-4 d-flex justify-content-center'>
-              <img src={SliderData[3].cover} class="d-block img-fluid" alt={SliderData[3].id} />
+              <img src={SliderData[3].cover} className="d-block img-fluid" alt={SliderData[3].id} />
             </div>
             <div className='col-md-1'></div>
           </div>

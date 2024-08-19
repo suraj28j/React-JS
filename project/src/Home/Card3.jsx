@@ -40,17 +40,17 @@ const Card2 = () => {
                 <div className='card-body'>
                   <Link to={`product/${item.id}`}>
                     <div className='card-img-top d-flex justify-content-center'>
-                      <img src={item.imgUrl} class="card-img-top w-75 " alt={item.id} />
+                      <img src={item.imgUrl} className="card-img-top w-75 " alt={item.id} />
                     </div>
                   </Link>
                   <div className='card-title'>
-                    <h6 class="card-title">{item.productName}</h6>
+                    <h6 className="card-title">{item.productName}</h6>
                     <span className='d-flex mt-4 mb-4'>
-                      <i class="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
-                      <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                      <i class="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
+                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                     </span>
                   </div>
                   <div className='d-flex justify-content-between'>

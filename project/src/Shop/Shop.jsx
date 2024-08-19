@@ -59,7 +59,7 @@ const Shop = () => {
 
   return (
     <div>
-      <div class="position-relative">
+      <div className="position-relative">
         <img src={cover} alt='cover' style={{width:'100%',height:'25vh',filter:'brightness(40%)'}} />
         <h3 className="position-absolute top-50 start-50 translate-middle text-white" style={{ zIndex: 2}}>{coverHeading}</h3>
       </div>
@@ -98,7 +98,7 @@ const Shop = () => {
             productCategory.length > 0 ? (
               productCategory.map((item) => (
                 <div className='col-md-4'>
-                  <div className='card' style={{ height: '100%', }}>
+                  <div className='card' style={{ height: '100%', }} key={item.id}>
                     <div className='card-body'>
                       <Link to={`/product/${item.id}`}>
                         <div className='card-img-top d-flex justify-content-center'>

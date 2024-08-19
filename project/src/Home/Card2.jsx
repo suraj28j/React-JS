@@ -22,19 +22,19 @@ const Card2 = () => {
           discoutProducts.map((items) => (
             <div className='col-md-4'>
 
-              <div className='card' style={{ height: '100%' }}>
+              <div className='card' style={{ height: '100%' }} key={items.id}>
                 <div className='d-flex justify-content-between m-2'>
                   <span className='p-2' style={{ backgroundColor: '#0f3460', color: 'white', borderRadius: '5px' }}>{items.discount}% off</span>
-                  <i class="bi bi-heart"></i>
+                  <i className="bi bi-heart"></i>
                 </div>
                 <div className='card-body'>
                   <Link to={`product/${items.id}`}>
                     <div className='card-img-top d-flex justify-content-center'>
-                      <img src={items.imgUrl} class="card-img-top img-fluid" alt={items.id} />
+                      <img src={items.imgUrl} className="card-img-top img-fluid" alt={items.id} />
                     </div>
                   </Link>
                   <div className='card-title'>
-                    <h6 class="card-title">{items.productName}</h6>
+                    <h6>{items.productName}</h6>
                     <span className='d-flex mt-4 mb-4'>
                       <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
                       <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>

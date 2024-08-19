@@ -49,7 +49,7 @@ const Product = () => {
   return (
     <>
       {/*Cover Photo */}
-      <div class="position-relative">
+      <div className="position-relative">
         <img src={cover} alt='cover' style={{ width: '100%', height: '25vh', filter: 'brightness(40%)' }} />
         <h3 className="position-absolute top-50 start-50 translate-middle text-white" style={{ zIndex: 2 }}>{coverHeading}</h3>
       </div>
@@ -91,7 +91,7 @@ const Product = () => {
             </Link>
           </h6>
 
-          <div class="collapse" id="Example">
+          <div className="collapse" id="Example">
             {
               reviews.map((item) => (
                 <div className='mt-2 mb-3'>
