@@ -8,8 +8,7 @@ import { useSelector } from 'react-redux'
 const Header = () => {
 
     const cart_data = useSelector((state) => state.productData.cartData);
-    let singleItem = cart_data.filter((value, index) => cart_data.indexOf(value) === index)
-    let cartLength = singleItem.length
+    let cart_data_Length = cart_data.length
 
     return (
         <div className='conatiner sticky-top'>
@@ -38,7 +37,7 @@ const Header = () => {
                                     <i class="bi bi-cart-fill"></i>
                                     <span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" 
                                     style={{ width: '25px', height: '25px', lineHeight: '18px' }}
-                                    >{cartLength}</span>
+                                    >{cart_data_Length}</span>
                                 </Link>
                             </li>
                         </ul>
