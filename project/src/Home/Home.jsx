@@ -6,7 +6,10 @@ import Card3 from './Card3'
 import Card4 from './Card4'
 
 
+
+
 const Home = () => {
+ 
   return (
     <div>
       <Carousel/>

@@ -39,11 +39,12 @@ const Card2 = () => {
               <div className='card' style={{ height: '100%' }}>
                 <div className='card-body'>
                   <Link to={`product/${item.id}`}>
-                    <div className='card-img-top d-flex justify-content-center'>
-                      <img src={item.imgUrl} className="card-img-top w-75 " alt={item.id} />
+                    <div className='card-img-top'>
+                      <img src={item.imgUrl} className="img-fluid" alt={item.id} />
                     </div>
                   </Link>
-                  <div className='card-title'>
+                  </div>
+                  <div className='card-title ms-4 me-4'>
                     <h6 className="card-title">{item.productName}</h6>
                     <span className='d-flex mt-4 mb-4'>
                       <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
@@ -53,14 +54,13 @@ const Card2 = () => {
                       <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                     </span>
                   </div>
-                  <div className='d-flex justify-content-between'>
+                  <div className='d-flex justify-content-between align-items-center ms-4 me-4 mb-4'>
                     <h6>$ {item.price}</h6>
                     <button
-                      style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }} 
+                      style={{ border: '0px',borderRadius: '50%', width:'45px',height:'45px',paddingBottom:'5px',fontSize:'25px' }} 
                       onClick={()=>{dispatch(addToCart(item));buttonHandler()}}
                       >+</button>
                   </div>
-                </div>
               </div>
             </div>
           ))

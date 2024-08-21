@@ -1,12 +1,18 @@
 import cover from '../Assets/Images/cover.jpg'
 import React, { useState, useEffect } from 'react'
-import { Link, useParams } from 'react-router-dom'
+import { Link, useLocation, useParams } from 'react-router-dom'
 import { products } from '../Assets/products'
 import { toast } from 'react-toastify'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/productAction/ProductAction'
 
 const Product = () => {
+
+  // to route pageup
+  const {pathname} = useLocation();
+  useEffect(()=>{
+    window.scrollTo(0,0)
+  },[pathname])
 
   let { id } = useParams();
 
@@ -20,7 +26,7 @@ const Product = () => {
 
   useEffect(() => {
     getProduct()
-  }, id);
+  },[id]);
 
   let getProduct = () => {
     let getItem = products.find((item) => {
@@ -48,6 +54,7 @@ const Product = () => {
   }
   return (
     <>
+    <span>
       {/*Cover Photo */}
       <div className="position-relative">
         <img src={cover} alt='cover' style={{ width: '100%', height: '25vh', filter: 'brightness(40%)' }} />
@@ -118,11 +125,12 @@ const Product = () => {
                 <div className='card' style={{ height: '100%' }}>
                   <div className='card-body'>
                     <Link to={`/product/${items.id}`}>
-                      <div className='card-img-top d-flex justify-content-center'>
-                        <img src={items.imgUrl} class="card-img-top img-fluid" alt={items.id} />
+                      <div className='card-img-top'>
+                        <img src={items.imgUrl} class="img-fluid" alt={items.id} />
                       </div>
                     </Link>
-                    <div className='card-title'>
+                    </div>
+                    <div className='card-title ms-4 me-4'>
                       <h6 className="card-title">{items.productName}</h6>
                       <span className='d-flex mt-4 mb-4'>
                         <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
@@ -132,21 +140,21 @@ const Product = () => {
                         <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                       </span>
                     </div>
-                    <div className='d-flex justify-content-between'>
+                    <div className='d-flex justify-content-between align-items-center ms-4 me-4 mb-4'>
                       <h6>$ {items.price}</h6>
                       <button
-                        style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
+                        style={{ border: '0px',borderRadius: '50%', width:'45px',height:'45px',paddingBottom:'5px',fontSize:'25px'}}
                         onClick={() => { dispatch(addToCart(items)); buttonHandler() }}
                       >+
                       </button>
                     </div>
-                  </div>
                 </div>
               </div>
             ))
           }
         </div>
       </div>
+      </span>
     </>
   )
 }

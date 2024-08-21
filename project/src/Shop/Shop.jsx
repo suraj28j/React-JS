@@ -5,9 +5,11 @@ import { toast } from 'react-toastify'
 import { Link } from 'react-router-dom'
 import { useDispatch } from 'react-redux'
 import { addToCart } from '../redux/productAction/ProductAction'
+import { useEffect } from 'react'
+import { useLocation } from 'react-router-dom'
 
 const Shop = () => {
-  const [coverHeading,setCoverHeading] = useState('product')
+  const [coverHeading, setCoverHeading] = useState('product')
 
   const dispatch = useDispatch();
 
@@ -32,7 +34,7 @@ const Shop = () => {
     let getItems = products.filter((item) => {
       return item.category === e.target[0].value
     })
-    if (getItems){
+    if (getItems) {
       setProductCategory(getItems)
       setCoverHeading(e.target[0].value)
     }
@@ -40,28 +42,40 @@ const Shop = () => {
       setProductCategory([])
   }
 
-  // const handleChange = (e) => {
-  //   // console.log(e.target.value);
-  //   let getItems = products.filter((item) => {
-  //      return item.productName.match(/e.target.value/g)
-  //   })
-  //   if (getItems){
-  //     setProductCategory(getItems)
-  //     setCoverHeading(e.target.value)
-  //   }
-  //   else
-  //     setProductCategory([])
-  // }
+  // to route pageup //
+  const { pathname } = useLocation();
+  //  console.log(pathname);
+  useEffect(() => {
+    window.scrollTo(0, 0)
+  }, [pathname])
+
+
+  // onChange Effect //
+  const handleChange = (e) => {
+    // console.log(e.target.value);
+    let value = e.target.value
+    let getItems = products.filter((item) => {
+      return item.productName.match(value) || item.category.toLocaleLowerCase().match(value)
+    })
+    // console.log(getItems);
+    if (getItems) {
+      setProductCategory(getItems)
+      setCoverHeading('product')
+    }
+    else
+      setProductCategory([])
+  }
+
 
   let buttonHandler = () => {
-    toast.success("Addde Successfully")
+    toast.success("Added Successfully")
   }
 
   return (
     <div>
       <div className="position-relative">
-        <img src={cover} alt='cover' style={{width:'100%',height:'25vh',filter:'brightness(40%)'}} />
-        <h3 className="position-absolute top-50 start-50 translate-middle text-white" style={{ zIndex: 2}}>{coverHeading}</h3>
+        <img src={cover} alt='cover' style={{ width: '100%', height: '25vh', filter: 'brightness(40%)' }} />
+        <h3 className="position-absolute top-50 start-50 translate-middle text-white" style={{ zIndex: 2 }}>{coverHeading}</h3>
       </div>
       <div className='container mt-4 mb-4'>
 
@@ -86,7 +100,7 @@ const Shop = () => {
 
           <div className='col-md-8 mt-2'>
             <form className="d-flex" role="search" onSubmit={handelSubmit}>
-              <input className="form-control" type="search" placeholder="Search"/>
+              <input className="form-control" type="search" placeholder="Search" onChange={handleChange} />
               <button className="btn btn-secoandry" type="submit"><i className="bi bi-search p-2"></i></button>
             </form>
           </div>
@@ -101,29 +115,30 @@ const Shop = () => {
                   <div className='card' style={{ height: '100%', }} key={item.id}>
                     <div className='card-body'>
                       <Link to={`/product/${item.id}`}>
-                        <div className='card-img-top d-flex justify-content-center'>
-                          <img src={item.imgUrl} class="card-img-top img-fluid " alt={item.id} />
+                        <div className='card-img-top'>
+                          <img src={item.imgUrl} className="img-fluid" alt={item.id} />
                         </div>
                       </Link>
-                      <div className='card-title'>
-                        <h6 className="card-title">{item.productName}</h6>
-                        <span className='d-flex mt-4 mb-4'>
-                          <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
-                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                          <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
-                        </span>
-                      </div>
-                      <div className='d-flex justify-content-between'>
-                        <h6>$ {item.price}</h6>
-                        <button
-                          onClick={() => { dispatch(addToCart(item)); buttonHandler() }}
-                          style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
-                        >+
-                        </button>
-                      </div>
                     </div>
+                    <div className='card-title ms-4 me-4'>
+                      <h6 className="card-title">{item.productName}</h6>
+                      <span className='d-flex mt-4 mb-4'>
+                        <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                        <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
+                      </span>
+                    </div>
+                    <div className='d-flex justify-content-between align-items-center ms-4 me-4 mb-4'>
+                      <h6>$ {item.price}</h6>
+                      <button
+                        onClick={() => { dispatch(addToCart(item)); buttonHandler() }}
+                        style={{ border: '0px', borderRadius: '50%', width: '45px', height: '45px', paddingBottom: '5px', fontSize: '25px' }}
+                      >+
+                      </button>
+                    </div>
+
                   </div>
                 </div>
               ))

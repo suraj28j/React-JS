@@ -7,3 +7,11 @@ export const addToCart = (product) => {
 export const removeFromCart = (id) => {
     return {type:ACTION_TYPE.REMOVE_FROM_CART,payload:id}
 }
+
+export const setIncrement = (id) => {
+    return {type:ACTION_TYPE.SET_INCREMENT,payload:id}
+}
+
+export const setDecrement = (id) => {
+    return {type:ACTION_TYPE.SET_DECREMENT,payload:id}
+}

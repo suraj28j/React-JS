@@ -10,7 +10,7 @@ const Card2 = () => {
   const dispatch = useDispatch();
 
   let buttonHandler = () => {
-    toast.success("Addde Successfully")
+    toast.success("Added Successfully")
   }
 
   return (
@@ -22,18 +22,19 @@ const Card2 = () => {
           discoutProducts.map((items) => (
             <div className='col-md-4'>
 
-              <div className='card' style={{ height: '100%' }} key={items.id}>
+              <div className='card ' style={{ height: '100%' }} key={items.id}>
                 <div className='d-flex justify-content-between m-2'>
                   <span className='p-2' style={{ backgroundColor: '#0f3460', color: 'white', borderRadius: '5px' }}>{items.discount}% off</span>
                   <i className="bi bi-heart"></i>
                 </div>
                 <div className='card-body'>
                   <Link to={`product/${items.id}`}>
-                    <div className='card-img-top d-flex justify-content-center'>
-                      <img src={items.imgUrl} className="card-img-top img-fluid" alt={items.id} />
+                    <div className='card-img-top'>
+                      <img src={items.imgUrl} className="img-fluid" alt={items.id} />
                     </div>
                   </Link>
-                  <div className='card-title'>
+                  </div>
+                  <div className='card-title ms-4 me-4'>
                     <h6>{items.productName}</h6>
                     <span className='d-flex mt-4 mb-4'>
                       <i className="bi bi-star-fill" style={{ color: '#ffcd4e' }}></i>
@@ -43,15 +44,16 @@ const Card2 = () => {
                       <i className="bi bi-star-fill ms-1" style={{ color: '#ffcd4e' }}></i>
                     </span>
                   </div>
-                  <div className='d-flex justify-content-between'>
+                  <div className='d-flex ms-4 me-4 mb-4 justify-content-between align-items-center'>
                     <h6>$ {items.price}</h6>
                     <button
-                      style={{ border: '0px', borderRadius: '50%', width: '30px', height: '30px', paddingBottom: '4px' }}
+                      style={{ 
+                        border: '0px',borderRadius: '50%', width:'45px',height:'45px',paddingBottom:'5px',fontSize:'25px'
+                      }}
                       onClick={()=>{dispatch(addToCart(items));buttonHandler()}}
                     >+
                     </button>
                   </div>
-                </div>
               </div>
             </div>
           ))
