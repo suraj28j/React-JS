@@ -106,6 +106,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.5,
+    quantity: 1
   },
   {
     id: "02",
@@ -129,6 +130,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.7,
+    quantity: 1
   },
   {
     id: "08",
@@ -152,6 +154,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.7,
+    quantity: 1
   },
   {
     id: "09",
@@ -175,6 +178,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.7,
+    quantity: 1
   },
   {
     id: "12",
@@ -198,6 +202,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.8,
+    quantity: 1
   },
   {
     id: "13",
@@ -221,6 +226,7 @@ export const discoutProducts = [
       },
     ],
     avgRating: 4.8,
+    quantity: 1
   },
 
 ]

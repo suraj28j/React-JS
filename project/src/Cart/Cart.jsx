@@ -10,13 +10,11 @@ const Cart = () => {
 
   const cart_data = useSelector((state) => state.productData.cartData);
   // console.log(cart_data);
-  // let singleItems = cart_data.filter((value, index) => cart_data.indexOf(value) === index)
 
   const totalPrice = cart_data.reduce((prevsValue, currentValue) => {
     return prevsValue + currentValue.price*currentValue.quantity;
   }, 0)
   
-
   return (
     
     <div className='container' style={{ backgroundColor: '#f6f9fc' }}>

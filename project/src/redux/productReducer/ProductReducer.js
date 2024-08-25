@@ -13,8 +13,7 @@ export const productReducer = (state = initState, action) => {
             });
             if(findItem){
                 findItem.quantity = findItem.quantity+1;
-            //    return {
-                
+            //    return {   
             //    }
             }
             else{
@@ -58,7 +57,7 @@ export const productReducer = (state = initState, action) => {
             let decreasedProduct = state.cartData.map((item)=>{
                 if(item.id===action.payload){
                     // console.log(item);
-                    let decQuantity = item.quantity> 1 ? item.quantity-1 : 0
+                    let decQuantity = item.quantity> 1 ? item.quantity-1 : 1
                     return {
                         ...item,quantity:decQuantity,
                     }

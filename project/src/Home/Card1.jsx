@@ -1,7 +1,7 @@
 import React from 'react'
 import { serviceData } from '../Assets/products'
 
-const Card = () => {
+const Card1 = () => {
     return (
         <div className='container mt-4 mb-4'>
             <div className='row'>
@@ -23,4 +23,4 @@ const Card = () => {
     )
 }
 
-export default Card
+export default Card1
