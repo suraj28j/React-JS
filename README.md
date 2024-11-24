@@ -2,4 +2,10 @@
 > My First React-JS Project
 
 - Home Page UI
-![alt screenshot](https://github.com/suraj28j/React-JS/blob/main/home-page.gif)
+
+![alt home-page](https://github.com/suraj28j/React-JS/blob/main/home-page.gif)
+
+
+- Shop Page UI
+
+![alt shop-page](https://github.com/suraj28j/React-JS/blob/main/shop-page.jpeg)
