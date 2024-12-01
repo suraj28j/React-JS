@@ -5,12 +5,12 @@
 
 - Home Page UI
 
-![alt home-page](https://github.com/suraj28j/React-JS/blob/main/home-page.gif)
+![alt home-page](https://github.com/suraj28j/Mart-Ecommerce/blob/main/home-page.gif)
 
 ---
 - Shop Page UI
 
-![alt shop-page](https://github.com/suraj28j/React-JS/blob/main/shop-page.jpeg)
+![alt shop-page](https://github.com/suraj28j/Mart-Ecommerce/blob/main/shop-page.jpeg)
 
 ---
 > [Click here to open](https://ecommerce-self-gamma-14.vercel.app/)
