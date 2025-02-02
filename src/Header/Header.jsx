@@ -2,7 +2,7 @@ import React from 'react'
 import { Link } from 'react-router-dom'
 import logo from '../Assets/Images/logo.png'
 import { useSelector } from 'react-redux'
-
+import './Header.css'
 
 
 const Header = () => {
@@ -35,7 +35,7 @@ const Header = () => {
                             <li>
                                 <Link className="dropdown-item nav-link me-4" to='/usercart'>
                                     <i class="bi bi-cart-fill"></i>
-                                    <span className="bg-info p-1 rounded-circle position-absolute translate-middle text-center" 
+                                    <span className="bgColor p-1 rounded-circle position-absolute translate-middle text-center" 
                                     style={{ width: '25px', height: '25px', lineHeight: '18px' }}
                                     >{cart_data_Length}</span>
                                 </Link>
