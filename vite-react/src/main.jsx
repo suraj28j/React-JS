@@ -3,14 +3,16 @@ import { createRoot } from 'react-dom/client'
 import './index.css'
 import App from './App.jsx'
 
-function MyApp() {
-  return (
-    <div>
-      <h2>Custom App</h2>
-    </div>
-  )
-}
+// function MyApp() {
+//   return (
+//     <div>
+//       <h2>Custom App</h2>
+//     </div>
+//   )
+// }
 
+// Create Custom React //
+// -------------------------------------------- //
 // const ReactElement = {
 //   type: 'a',
 //   props: {
@@ -20,29 +22,29 @@ function MyApp() {
 //   children: "Click me to visit google"
 // }
 
-const username = "Suraj";
-const ReactElement = React.createElement(
-  "a",
-  { href: "https://google.com", target: "_blank" },
-  "Click me to visit google ",
-  username
-)
+// const username = "Suraj";
 
-const AnotherReactElement = (
-  <a href="https://google.com" target="blank">Click me to visit google</a>
-)
+// const ReactElement = React.createElement(
+//   "a",
+//   { href: "https://google.com", target: "_blank" },
+//   "Click me to visit google ",
+//   username
+// )
+// const AnotherReactElement = (
+//   <a href="https://google.com" target="blank">Click me to visit google</a>
+// )
+
+// -------------------------------------------- //
 
 createRoot(document.getElementById('root')).render(
-  // <StrictMode>
+  <StrictMode>
 
+    {/* MyApp() // we can write this way
+    <MyApp />
+    AnotherReactElement
+    ReactElement */}
+    
+    <App />
 
-  //  <App />  
-  //  MyApp() 
-  //  <MyApp /> 
-
-  // ReactElement
-  // AnotherReactElement
-  ReactElement
-
-  // </StrictMode>
+  </StrictMode>
 )
