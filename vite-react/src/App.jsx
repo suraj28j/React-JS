@@ -1,3 +1,5 @@
+import ClassComponentExample from './classComponents/ClassComponentExample';
+import StateExample from './classComponents/StateExample';
 import ExampleListAndKey from './ExampleListAndKey';
 import ExampleProps from './ExampleProps';
 
@@ -29,9 +31,9 @@ function App() {
 
   // [ Props ]
   const userInfo = {
-    name:"Suraj",
-    age:35,
-    city:"Bangalore"
+    name: "Suraj",
+    age: 35,
+    city: "Bangalore"
   }
 
 
@@ -62,8 +64,11 @@ function App() {
 
       {/* ---------------------------x-x-x--------------------------- */}
 
-      <ExampleProps msg = "This is Example of Props" userInfo = {userInfo}/>
-      <ExampleListAndKey/>
+      <ExampleProps msg="This is Example of Props" userInfo={userInfo} />
+      <ExampleListAndKey />
+
+      <ClassComponentExample course="React js" />
+      <StateExample/>
     </>
   )
 }
