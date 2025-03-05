@@ -15,7 +15,7 @@ export class StateExample extends Component {
         this.setState({ count: this.state.count - 1 })
     }
     render() {
-        console.log(this);
+        // console.log(this);
 
         return (
             <>

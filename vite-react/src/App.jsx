@@ -2,6 +2,7 @@ import ClassComponentExample from './classComponents/ClassComponentExample';
 import StateExample from './classComponents/StateExample';
 import ExampleListAndKey from './ExampleListAndKey';
 import ExampleProps from './ExampleProps';
+import FormValidation from './FormValidation';
 
 import './style/style.css';
 import styleModule from './style/style.module.css';
@@ -69,6 +70,8 @@ function App() {
 
       <ClassComponentExample course="React js" />
       <StateExample/>
+
+      <FormValidation/>
     </>
   )
 }
