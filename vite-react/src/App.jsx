@@ -1,3 +1,4 @@
+import ExampleListAndKey from './ExampleListAndKey';
 import ExampleProps from './ExampleProps';
 
 import './style/style.css';
@@ -5,8 +6,9 @@ import styleModule from './style/style.module.css';
 
 
 function App() {
+
   // const username = "Suraj";
-  // {username} => evaluation expression mean final outcome
+  // [ {username} => evaluation expression mean final outcome ]
 
   // [ Internal CSS ] //
   const styleObject = {
@@ -24,6 +26,14 @@ function App() {
       textDecoration: 'underline'
     }
   }
+
+  // [ Props ]
+  const userInfo = {
+    name:"Suraj",
+    age:35,
+    city:"Bangalore"
+  }
+
 
   return (
     <>
@@ -52,7 +62,8 @@ function App() {
 
       {/* ---------------------------x-x-x--------------------------- */}
 
-      <ExampleProps msg = "This is Example of Props"/>
+      <ExampleProps msg = "This is Example of Props" userInfo = {userInfo}/>
+      <ExampleListAndKey/>
     </>
   )
 }
