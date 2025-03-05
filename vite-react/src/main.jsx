@@ -11,8 +11,8 @@ import App from './App.jsx'
 //   )
 // }
 
-// Create Custom React //
-// -------------------------------------------- //
+
+// -----------------[Create Custom React]---------------- //
 // const ReactElement = {
 //   type: 'a',
 //   props: {
@@ -34,7 +34,7 @@ import App from './App.jsx'
 //   <a href="https://google.com" target="blank">Click me to visit google</a>
 // )
 
-// -------------------------------------------- //
+// ------------------x-x-x----------------------- //
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>

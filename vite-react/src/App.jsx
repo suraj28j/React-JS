@@ -1,5 +1,8 @@
+import ExampleProps from './ExampleProps';
+
 import './style/style.css';
 import styleModule from './style/style.module.css';
+
 
 function App() {
   // const username = "Suraj";
@@ -48,6 +51,8 @@ function App() {
       </div>
 
       {/* ---------------------------x-x-x--------------------------- */}
+
+      <ExampleProps msg = "This is Example of Props"/>
     </>
   )
 }
