@@ -1,7 +1,7 @@
 import React, { StrictMode } from 'react'
 import { createRoot } from 'react-dom/client'
-// import './index.css'
 import App from './App.jsx'
+import { BrowserRouter } from 'react-router-dom'
 
 // function MyApp() {
 //   return (
@@ -38,13 +38,13 @@ import App from './App.jsx'
 
 createRoot(document.getElementById('root')).render(
   <StrictMode>
-
-    {/* MyApp() // we can write this way
-    <MyApp />
-    AnotherReactElement
-    ReactElement */}
+    <BrowserRouter>
+      {/* MyApp() // we can write this way
+      <MyApp />
+      AnotherReactElement
+      ReactElement */}
     
-    <App />
-
+      <App />
+    </BrowserRouter>
   </StrictMode>
 )
