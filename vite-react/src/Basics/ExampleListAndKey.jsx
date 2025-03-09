@@ -235,37 +235,38 @@ const ExampleListAndKey = () => {
     return (
         <div className='container'>
             <div className='row'>
-                <div className='col-md-2'></div>
-                <div className='col-md-8'>
-                <table className='table table-striped'>
-            <thead>
-                <tr>
-                    <th>Id</th>
-                    <th>Name</th>
-                    <th>Username</th>
-                    <th>Email</th>
-                    <th>Phone</th>
-                </tr>
-            </thead>
-            <tbody>
-                {
-                    users.map((user) => (
-                        <tr key={user.id}>
-                            <td>{user.id}</td>
-                            <td>{user.name}</td>
-                            <td>{user.username}</td>
-                            <td>{user.email}</td>
-                            <td>{user.phone}</td>
-                        </tr>
-                    ))
-                }
-            </tbody>
-        </table>
+                <div className='col-md-1'></div>
+                <div className='col-md-10'>
+                    <h2 className='text-center mt-4 mb-4'>List and Key Example</h2>
+                    <table className='table table-striped'>
+                        <thead>
+                            <tr>
+                                <th>Id</th>
+                                <th>Name</th>
+                                <th>Username</th>
+                                <th>Email</th>
+                                <th>Phone</th>
+                            </tr>
+                        </thead>
+                        <tbody>
+                            {
+                                users.map((user) => (
+                                    <tr key={user.id}>
+                                        <td>{user.id}</td>
+                                        <td>{user.name}</td>
+                                        <td>{user.username}</td>
+                                        <td>{user.email}</td>
+                                        <td>{user.phone}</td>
+                                    </tr>
+                                ))
+                            }
+                        </tbody>
+                    </table>
                 </div>
-                <div className='col-md-2'></div>
+                <div className='col-md-1'></div>
             </div>
         </div>
-        
+
     )
 }
 

@@ -7,6 +7,8 @@ import ExampleListAndKey from '../Basics/ExampleListAndKey'
 import FormValidation from '../FormValidation'
 import ClassComponentExample from '../classComponents/ClassComponentExample'
 import StateExample from '../classComponents/StateExample'
+import MountingPhase from '../classComponents/MountingPhase'
+import UnmountingPhase from '../classComponents/UnmountingPhase'
 import UseReducerHook from '../hooks/UseReducerHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
@@ -21,34 +23,34 @@ const Router = () => {
     }
     return (
         <div>
-        <Routes>
-            {/* Basics */}
-            <Route path="/basics/apply-css" element={<ApplyCSS />} />
-            <Route path="/basics/props" element={<ExampleProps msg="This is Example of Props" userInfo={userInfo} />} />
-            <Route path="/basics/list-and-key" element={<ExampleListAndKey />} />
+            <Routes>
+                {/* Basics */}
+                <Route path="/basics/apply-css" element={<ApplyCSS />} />
+                <Route path="/basics/props" element={<ExampleProps msg="This is Example of Props" userInfo={userInfo} />} />
+                <Route path="/basics/list-and-key" element={<ExampleListAndKey />} />
 
-            {/* Class Components */}
-            <Route path="/class-component/example" element={<ClassComponentExample course="React js"/>} />
-            <Route path="/class-component/state" element={<StateExample />} />
-            <Route path="/class-component/mounting" element={<ClassComponentExample />} />
-            <Route path="/class-component/unmounting" element={<ClassComponentExample />} />
+                {/* Class Components */}
+                <Route path="/class-component/example" element={<ClassComponentExample course="React js" />} />
+                <Route path="/class-component/state" element={<StateExample />} />
+                <Route path="/class-component/mounting" element={<MountingPhase />} />
+                <Route path="/class-component/unmounting" element={<UnmountingPhase />} />
 
-            {/* Hooks */}
-            <Route path="/hooks/usestate" element={<UseReducerHook />} />
-            <Route path="/hooks/useeffect" element={<UseReducerHook />} />
-            <Route path="/hooks/usereducer" element={<UseReducerHook />} />
-            <Route path="/hooks/useref" element={<UseReducerHook />} />
+                {/* Hooks */}
+                <Route path="/hooks/usestate" element={<UseReducerHook />} />
+                <Route path="/hooks/useeffect" element={<UseReducerHook />} />
+                <Route path="/hooks/usereducer" element={<UseReducerHook />} />
+                <Route path="/hooks/useref" element={<UseReducerHook />} />
 
-            {/* Form Validation */}
-            <Route path="/form-validation" element={<FormValidation />} />
+                {/* Form Validation */}
+                <Route path="/form-validation" element={<FormValidation />} />
 
-            {/* Pagination */}
-            <Route path="/pagination" element={<Pagination/>} />
-            
-            {/* React Task */}
-            <Route path="/react-task/task1" element={<Task1/>} />
-            <Route path="/react-task/task2" element={<Task2/>} />
-        </Routes>
+                {/* Pagination */}
+                <Route path="/pagination" element={<Pagination />} />
+
+                {/* React Task */}
+                <Route path="/react-task/task1" element={<Task1 />} />
+                <Route path="/react-task/task2" element={<Task2 />} />
+            </Routes>
         </div>
     )
 }
