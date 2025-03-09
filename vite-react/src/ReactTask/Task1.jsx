@@ -31,7 +31,7 @@ const Task1 = () => {
         setCity(contries[e.target.value].cities)
     }
     return (
-        <div className='container'>
+        <div className='main_container'>
             <div className='countries'>
                 <select onChange={hanldeClik}>
                     <option value="" hidden>Select</option>

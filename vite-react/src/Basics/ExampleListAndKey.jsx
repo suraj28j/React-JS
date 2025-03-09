@@ -1,5 +1,4 @@
 import React from 'react'
-
 const ExampleListAndKey = () => {
     const users = [
         {
@@ -234,7 +233,11 @@ const ExampleListAndKey = () => {
         }
     ]
     return (
-        <table className='table table-striped'>
+        <div className='container'>
+            <div className='row'>
+                <div className='col-md-2'></div>
+                <div className='col-md-8'>
+                <table className='table table-striped'>
             <thead>
                 <tr>
                     <th>Id</th>
@@ -258,6 +261,11 @@ const ExampleListAndKey = () => {
                 }
             </tbody>
         </table>
+                </div>
+                <div className='col-md-2'></div>
+            </div>
+        </div>
+        
     )
 }
 

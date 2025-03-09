@@ -61,7 +61,7 @@ export class FormValidation extends Component {
                     <div className='col-md-4'></div>
                     <div className='col-md-4'>
                         <form onSubmit={this.handleSubmit}>
-                            <h2 className='text-center'>Contact US</h2>
+                            <h2 className='text-center mt-4 mb-4'>Contact US</h2>
                             <input type='text' placeholder='Enter First Name' className='form-control' name='firstname' onChange={this.handleChange} />
                             <p className='text-danger'>{this.state.firstnameErr}</p>
                             <input type='text' placeholder='Enter Last Name' className='form-control mt-2' name='lastname' onChange={this.handleChange} />
