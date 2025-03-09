@@ -74,3 +74,18 @@ class MountingPhase extends Component {
 }
 
 export default MountingPhase
+
+
+/*
+Mounting phase=> When an instence of an component is created and it is instered into DOM node.
+In mounting phase we have 4 methods/steps 
+-> constructor
+-> static getDerivedStateFromProps
+-> render
+-> componentDidMount
+
+
+=> In static getDerivedStateFromProps method we will recive state from parent component.
+=> In static getDerivedStateFromProps method we must always define one state.
+=> In static getDerivedStateFromPro method we should return some object else return null.
+*/

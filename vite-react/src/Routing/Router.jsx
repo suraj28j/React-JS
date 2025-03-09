@@ -8,7 +8,7 @@ import FormValidation from '../FormValidation'
 import ClassComponentExample from '../classComponents/ClassComponentExample'
 import StateExample from '../classComponents/StateExample'
 import MountingPhase from '../classComponents/MountingPhase'
-import UnmountingPhase from '../classComponents/UnmountingPhase'
+import UpdatingPhase from '../classComponents/UpdatingPhase'
 import UseReducerHook from '../hooks/UseReducerHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
@@ -33,7 +33,7 @@ const Router = () => {
                 <Route path="/class-component/example" element={<ClassComponentExample course="React js" />} />
                 <Route path="/class-component/state" element={<StateExample />} />
                 <Route path="/class-component/mounting" element={<MountingPhase />} />
-                <Route path="/class-component/unmounting" element={<UnmountingPhase />} />
+                <Route path="/class-component/updating" element={<UpdatingPhase />} />
 
                 {/* Hooks */}
                 <Route path="/hooks/usestate" element={<UseReducerHook />} />
