@@ -1,6 +1,5 @@
 import React, { Component } from 'react'
-import { appId } from '../../key'
-
+import { appId } from '../key'
 class UpdatingPhase extends Component {
   state = {
     userData: [],

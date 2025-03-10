@@ -9,7 +9,10 @@ import ClassComponentExample from '../classComponents/ClassComponentExample'
 import StateExample from '../classComponents/StateExample'
 import MountingPhase from '../classComponents/MountingPhase'
 import UpdatingPhase from '../classComponents/UpdatingPhase'
+import UseStateHook from '../hooks/UseStateHook'
+import UseEffectHook from '../hooks/UseEffectHook'
 import UseReducerHook from '../hooks/UseReducerHook'
+import UseRefHook from '../hooks/UseRefHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
 import Task2 from '../ReactTask/Task2'
@@ -36,10 +39,10 @@ const Router = () => {
                 <Route path="/class-component/updating" element={<UpdatingPhase />} />
 
                 {/* Hooks */}
-                <Route path="/hooks/usestate" element={<UseReducerHook />} />
-                <Route path="/hooks/useeffect" element={<UseReducerHook />} />
+                <Route path="/hooks/usestate" element={<UseStateHook/>} />
+                <Route path="/hooks/useeffect" element={<UseEffectHook />} />
                 <Route path="/hooks/usereducer" element={<UseReducerHook />} />
-                <Route path="/hooks/useref" element={<UseReducerHook />} />
+                <Route path="/hooks/useref" element={<UseRefHook />} />
 
                 {/* Form Validation */}
                 <Route path="/form-validation" element={<FormValidation />} />
