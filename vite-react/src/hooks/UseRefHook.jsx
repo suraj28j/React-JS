@@ -3,7 +3,10 @@ import arrows from '../assets/images/arrows.png'
 const UseRefHook = () => {
     const logo = useRef(null)
     const text = useRef(null)
-    const changleImg = () => {
+
+    console.log(logo)
+
+    const changlImg = () => {
         logo.current.style.transform = 'rotate(45deg)'
     }
     const textHandle = () => {
@@ -15,7 +18,7 @@ const UseRefHook = () => {
             <div className='row mt-4'>
                 <div className='col-md-6'>
                     <h3>Example 1</h3>
-                    <img src={arrows} alt='arrows' onClick={changleImg} ref={logo} />
+                    <img src={arrows} alt='arrows' onClick={changlImg} ref={logo} />
                 </div>
                 <div className='col-md-6'>
                     <h3>Example 2</h3>

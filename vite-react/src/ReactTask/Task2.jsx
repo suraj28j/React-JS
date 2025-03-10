@@ -1,7 +1,7 @@
 import { useState } from "react";
 
 const Task2 = () => {
-    const [data, setData] = useState({ sport: "badminton", day: "weekday" });
+    const [data, setData] = useState({ sport: "", day: "" });
 
     const option = ["cricket", "footeball", "hockey"];
     const days = ["weekday", "weekend"];
