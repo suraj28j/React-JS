@@ -13,6 +13,7 @@ import UseStateHook from '../hooks/UseStateHook'
 import UseEffectHook from '../hooks/UseEffectHook'
 import UseReducerHook from '../hooks/UseReducerHook'
 import UseRefHook from '../hooks/UseRefHook'
+import UseMemoHook from '../hooks/UseMemoHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
 import Task2 from '../ReactTask/Task2'
@@ -39,10 +40,11 @@ const Router = () => {
                 <Route path="/class-component/updating" element={<UpdatingPhase />} />
 
                 {/* Hooks */}
-                <Route path="/hooks/usestate" element={<UseStateHook/>} />
+                <Route path="/hooks/usestate" element={<UseStateHook />} />
                 <Route path="/hooks/useeffect" element={<UseEffectHook />} />
                 <Route path="/hooks/usereducer" element={<UseReducerHook />} />
                 <Route path="/hooks/useref" element={<UseRefHook />} />
+                <Route path="/hooks/usememo" element={<UseMemoHook />} />
 
                 {/* Form Validation */}
                 <Route path="/form-validation" element={<FormValidation />} />

@@ -44,6 +44,7 @@ const Header = () => {
                                 <li><Link className="dropdown-item" to="/hooks/useeffect">useEffect</Link></li>
                                 <li><Link className="dropdown-item" to="/hooks/usereducer">useReducer</Link></li>
                                 <li><Link className="dropdown-item" to="/hooks/useref">useRef</Link></li>
+                                <li><Link className="dropdown-item" to="/hooks/usememo">useMemo</Link></li>
                             </ul>
                         </li>
                         <li className="nav-item">
