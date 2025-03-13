@@ -4,10 +4,10 @@ import Todo from './components/Todo'
 
 function App() {
   return (
-    <>
-     <AddTodo/>
-     <Todo/>
-    </>
+    <div className='color'>
+      <AddTodo />
+      <Todo />
+    </div>
   )
 }
 
