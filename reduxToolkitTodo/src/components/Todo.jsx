@@ -1,9 +1,11 @@
-import React from 'react'
+import React, { useContext } from 'react'
 import "./todo.css"
 import { useSelector, useDispatch } from 'react-redux'
 import { removeTodo } from '../redux/features/todo/todoSlice'
+import InputContext from '../context/InputContext'
 
 const Todo = () => {
+    const { input, setInput } = useContext(InputContext)
     const todos = useSelector(state => state.todos)
     const dispatch = useDispatch();
     return (
@@ -17,11 +19,18 @@ const Todo = () => {
                             todos.map((todo) => (
                                 <li key={todo.id}>
                                     {todo.text}
-                                    <button
-                                        onClick={() => dispatch(removeTodo(todo.id))}
-                                        className='btn btn-danger'>
-                                        <i className="bi bi-trash3"></i>
-                                    </button>
+                                    <div>
+                                        <button
+                                            onClick={() => (setInput(todo.text), dispatch(removeTodo(todo.id)))}
+                                            className='btn btn-info me-2'>
+                                            <i className="bi bi-pencil-square"></i>
+                                        </button>
+                                        <button
+                                            onClick={() => dispatch(removeTodo(todo.id))}
+                                            className='btn btn-danger'>
+                                            <i className="bi bi-trash3"></i>
+                                        </button>
+                                    </div>
                                 </li>
 
                             ))
