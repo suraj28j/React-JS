@@ -13,6 +13,8 @@ import UseStateHook from '../hooks/UseStateHook'
 import UseEffectHook from '../hooks/UseEffectHook'
 import UseReducerHook from '../hooks/UseReducerHook'
 import UseRefHook from '../hooks/UseRefHook'
+import ComponentA from '../hooks/useContextHook/ComponentA'
+import LazyLoading from '../ReactTask/LazyLoading'
 import UseMemoHook from '../hooks/UseMemoHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
@@ -44,6 +46,7 @@ const Router = () => {
                 <Route path="/hooks/useeffect" element={<UseEffectHook />} />
                 <Route path="/hooks/usereducer" element={<UseReducerHook />} />
                 <Route path="/hooks/useref" element={<UseRefHook />} />
+                <Route path="/hooks/usecontext" element={<ComponentA />} />
                 <Route path="/hooks/usememo" element={<UseMemoHook />} />
 
                 {/* Form Validation */}
@@ -55,6 +58,7 @@ const Router = () => {
                 {/* React Task */}
                 <Route path="/react-task/task1" element={<Task1 />} />
                 <Route path="/react-task/task2" element={<Task2 />} />
+                <Route path="/react-task/lazy" element={<LazyLoading />} />
             </Routes>
         </div>
     )
