@@ -31,18 +31,22 @@ const Task1 = () => {
         setCity(contries[e.target.value].cities)
     }
     return (
-        <div className='main_container'>
+        <div className='_container'>
+
             <div className='countries'>
+                <h5>Country</h5>
                 <select onChange={hanldeClik}>
                     <option value="" hidden>Select</option>
                     {
-                        contries.map((contry, ind) => (
-                            <option key={contry.value} value={ind}>{contry.name}</option>
+                        contries.map((contry, index) => (
+                            <option key={contry.value} value={index}>{contry.name}</option>
                         ))
                     }
                 </select>
             </div>
+
             <div className='cities'>
+                <h5>City</h5>
                 <select>
                     {
                         city.map((city, ind) => (

@@ -12,13 +12,13 @@ const Task2 = () => {
     }
     console.log(data);
     return (
-        <div>
-            <form>
+        <div className="container">
+            <form className="mt-4">
                 <h3>Select Your Sport : </h3>
                 {
                     option.map((game, ind) => (
                         <div key={ind}>
-                            <label htmlFor="sport">{game} : </label>
+                            <label htmlFor="sport">{game} :  </label>
                             <input type="radio" name="game" id="sport" value={game} onClick={clickHandle} />
                         </div>
                     ))

@@ -19,6 +19,8 @@ import UseMemoHook from '../hooks/UseMemoHook'
 import Pagination from '../Pagination/Pagination'
 import Task1 from '../ReactTask/Task1'
 import Task2 from '../ReactTask/Task2'
+import TraficLight from '../ReactTask/Trafic Light/TraficLight'
+import About from '../About/About'
 
 const Router = () => {
     // [ Props ]
@@ -30,6 +32,9 @@ const Router = () => {
     return (
         <div>
             <Routes>
+                {/* About */}
+                <Route path="/" element={<About />} />
+
                 {/* Basics */}
                 <Route path="/basics/apply-css" element={<ApplyCSS />} />
                 <Route path="/basics/props" element={<ExampleProps msg="This is Example of Props" userInfo={userInfo} />} />
@@ -58,6 +63,7 @@ const Router = () => {
                 {/* React Task */}
                 <Route path="/react-task/task1" element={<Task1 />} />
                 <Route path="/react-task/task2" element={<Task2 />} />
+                <Route path="/react-task/traficlight" element={<TraficLight />} />
                 <Route path="/react-task/lazy" element={<LazyLoading />} />
             </Routes>
         </div>

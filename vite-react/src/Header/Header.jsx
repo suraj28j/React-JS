@@ -3,7 +3,7 @@ import { Link } from 'react-router-dom'
 
 const Header = () => {
     return (
-        <nav className="navbar navbar-expand-lg bg-body-tertiary">
+        <nav className="navbar navbar-expand-lg bg-body-tertiary shadow p-3 bg-white rounded sticky-top">
             <div className="container-fluid">
                 <h2 className="navbar-brand">React</h2>
                 <button className="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
@@ -61,6 +61,7 @@ const Header = () => {
                             <ul className="dropdown-menu">
                                 <li><Link className="dropdown-item" to="/react-task/task1">Task 1</Link></li>
                                 <li><Link className="dropdown-item" to="/react-task/task2">Task 2</Link></li>
+                                <li><Link className="dropdown-item" to="/react-task/traficlight">TraficLight</Link></li>
                                 <li><Link className="dropdown-item" to="/react-task/lazy">Lazy</Link></li>
                             </ul>
                         </li>
