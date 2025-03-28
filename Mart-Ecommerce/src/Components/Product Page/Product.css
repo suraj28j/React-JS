@@ -1,0 +1,41 @@
+.product_section .product_rating i{
+    color:#ffcd4e ;
+}
+
+.product_price_n_category{
+    display: flex;
+    align-items: center;
+}
+.product_price_n_category h6{
+    margin-left: 3rem;
+}
+.input_add_button{
+    width: 7rem;
+    display: flex;
+    flex-direction: column;
+}
+.input_add_button input{
+    padding: 0.5rem;
+}
+.input_add_button button{
+    margin-top: 1rem;
+    background-color:#0f3460 ;
+    color: white;
+    padding: 0.6rem 0;
+    border: 0;
+    border-radius: 5px;
+}
+
+.description_n_review{
+    display: flex;
+}
+.description_n_review>div{
+    cursor: pointer;
+    margin-left: 1rem;
+    margin-top: -0.1rem;
+}
+
+.acc-item{
+    display: flex;
+    flex-direction: column;
+}

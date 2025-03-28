@@ -1,0 +1,82 @@
+.shop_section{
+    margin-bottom: 3rem;
+}
+
+.banner {
+    height: 15rem;
+    position: relative;
+    text-align: center;
+}
+
+.banner img {
+    width: 100%;
+    height: 100%;
+    filter: brightness(40%);
+}
+
+.banner h4 {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    color: white;
+}
+
+/* Filter Items Section */
+
+.filter_section {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+}
+
+.dropdown button {
+    padding: 0.5rem 0.8rem;
+    border: 0;
+    background-color: #0f3460;
+    color: white;
+    border-radius: 5px;
+}
+
+.dropdown ul li {
+    cursor: pointer;
+    border-radius: 5px;
+}
+
+.dropdown ul li:hover {
+    background-color: #0f3460;
+    color: white;
+}
+
+.filter_section .search_item {
+    width: 50rem;
+    display: flex;
+    justify-content: space-between;
+    padding: 0.2rem;
+    border-radius: 5px;
+}
+
+.filter_section .search_item input {
+    border: 0;
+    outline: 0;
+    width: 100%;
+}
+
+.filter_section .search_item button {
+    border: 0;
+    padding: 0.5rem 0.8rem;
+    border-radius: 5px;
+    background-color: #0f3460;
+    color: white;
+}
+
+@media (max-width:992px) {
+    .filter_section {
+        flex-direction: column;
+    }
+
+    .filter_section .search_item {
+        width: 25rem;
+        margin-top: 1rem;
+    }
+}
+
