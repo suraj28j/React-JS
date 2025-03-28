@@ -5,6 +5,13 @@
 }
 
 
+.service_section i{
+  background-color: white;
+  padding: 10px;
+  border-radius: 50%;
+}
+
+
 .bi-heart-fill{
 opacity: 0;
 }
@@ -15,9 +22,3 @@ opacity: 0;
   background-color:#0f3460 ;
 }
 
-
-.service_section i{
-  background-color: white;
-  padding: 10px;
-  border-radius: 50%;
-}

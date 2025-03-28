@@ -8,6 +8,7 @@ const Card1 = () => {
                 <div className='row'>
                     {
                         serviceData.map((item) => (
+
                             <div className='col-sm-6 col-lg-4 col-xl-3 text-center' key={item.title}>
                                 <div className="card" style={{ background: `${item.bg}` }}>
                                     <div className="card-body">
@@ -17,6 +18,7 @@ const Card1 = () => {
                                     </div>
                                 </div>
                             </div>
+                            
                         ))
                     }
                 </div>

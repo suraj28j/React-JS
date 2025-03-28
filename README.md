@@ -13,4 +13,5 @@
 ![alt shop-page](https://github.com/suraj28j/Mart-Ecommerce/blob/main/shop-page.jpeg)
 
 ---
-> [Click here to open](https://mart-ecommerce-mu.vercel.app/)
+
+> [Click here to open](https://mart-ecommerce-mu.vercel.app/ )
